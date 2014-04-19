@@ -7,9 +7,9 @@ define [], () ->
     #   Configuration requireJs
     #
     ###################################################################################
-    loadConfig = () ->
+    @loadConfig = () ->
       require.config
-        baseUrl: "."
+        baseUrl: ""
         paths:
           jquery: "webjars/jquery/2.1.0/jquery"
           bootstrap: "webjars/bootstrap/3.1.1/js/bootstrap"
@@ -35,7 +35,7 @@ define [], () ->
     #   Modification du DOM pour chargement fichier CSS
     #
     ###################################################################################
-    loadCss = (cssName) ->
+    @loadCss = (cssName) ->
       url = cssPath()[cssName]
       link = document.createElement("link")
       link.type = "text/css"
